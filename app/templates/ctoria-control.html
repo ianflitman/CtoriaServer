@@ -1,0 +1,26 @@
+<div class="container controlbox col-md-6">
+
+    <div class="col-md-7" style="position:relative;border:1px solid #c6c7d2;padding: 15px; background-color: #fafaff">
+        <p id="title" class="script-title">{{title}}</p>
+
+        <p id="generated">Generated:&nbsp; {{generated}}</p>
+
+        <!--<p id="length">length:&nbsp;</p>-->
+        <div><i class="fa fa-clock-o"><span id="duration" class="default-text">&nbsp;&nbsp;&nbsp;&nbsp;</span></i>
+        </div>
+        <div><i class="fa fa-exchange"><span id="lineChanges" class="default-text">&nbsp;&nbsp;&nbsp;&nbsp;dialogue: {{dialogueChanges}}</span></i>
+        </div>
+
+        <div><i class="fa fa-video-camera"><span id="cameraChanges" class="default-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;camera: {{cameraChanges}}</span></i>
+        </div>
+        <div style="padding-top: 15px">
+            <label for="co-creator">made by: </label>
+            <input id="co-creator" type="text" maxlength="32" value=" Anonymous user"
+                   style="margin-left: 10px; width: 190px"/>
+        </div>
+    </div>
+
+    <div class="row" style="position: absolute; bottom: 0;">
+        <button id="play" class="playbtn">play</button>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+    <div id=row_{{cut.index}} class="row col-md-6" data-file="0" data-ctoria-type="DEFAULT" style="background-color:#ebf5ff;border-left: 1px solid #c6c7d2;"> <!--#fbf6ff-->
+        <div speaker-cut-id={{cut.index}} class="col-md-1 speakertxt" style="padding-left: 0px;padding-top: 8px">{{cut.index | speaker}}</div>
+        <div class="col-md-8" style="padding-left: 0px">
+            <p data-cut-id={{cut.index}} class="col-md-12 default-text">{{cut.line}}</p>
+        </div>
+        <div id=icon_{{cut.id}} class="col-md-3">
+            <button id=camera_{{cut.index}} class="camerabtn pull-left" style="margin-left:35px; margin-top: 6px">
+                {{cut.sources[0].file | camera}}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,499 @@
+/* app css stylesheet */
+
+/*font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";*/
+
+/*@font-face {*/
+  /*font-family: 'PT Sans';*/
+  /*src: local('PT Sans');*/
+  /*url('PTS55F.ttf')*/
+/*}*/
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic, oblique;
+  src: local('Ubuntu');
+  url('/jane/app/fonts/UbuntuMono-RI.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu');
+  url('UbuntuMono-R.ttf')
+}
+
+
+
+@font-face {
+  font-family: 'Padauk';
+  src: local('Padauk');
+  url('Padauk.ttf')
+}
+
+@font-face {
+  font-family: 'LiberationSans';
+  src: local('LiberationSans');
+  url('LiberationSans-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Garuda';
+  src: local('Garuda');
+  url('Garuda.ttf')
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.togglebtn {
+  border-radius: 0px;
+  data-height: 15;
+
+}
+
+.togglebtn .btn {
+  background-color: blueviolet;
+  color: #ffffff;
+
+}
+
+.togglebtn .btn:hover {
+  background: #cf3232;
+}
+
+.accordianContainer {
+  border-top: 0px;
+}
+
+.placementbtn {
+  border-top: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+
+  /*background: #32fd35;*/
+  background-color: #fbfdff;
+  border-radius: 0px;
+  text-align: left;
+  padding-left: 0px;
+  left:0px;
+  white-space: normal;
+  color: #333;
+  font-family: 'Ubuntu', Verdana;
+}
+
+.childplacement {
+  border-top: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  /*background: #f7f4e8;*/
+  background-color: #fbfdff;
+  border-radius: 0px;
+  text-align: left;
+  padding-left: 8px;
+  left:10px;
+  white-space: normal;
+}
+
+.defaultbtn {
+ border: 0px;
+   /*border-right-width: 0px;
+  border-left-width: 0px;*/
+  background-color: #fafaff;
+  /*border-radius: 0px;*/
+  text-align: left ;
+  /*padding-bottom: 5px;*/
+  white-space: normal;
+  font-family: 'Ubuntu', Verdana;
+}
+
+.defaultbtn:hover{
+  background-color: #ebeded;
+}
+
+.childoption {
+  /*border-left: 1px solid #c6c7d2;*/
+  background: #f7f4e8;
+  background-color: #fafaff; /*#f5eac9;*/
+  border-radius: 0px;
+  text-align: left ;
+  padding-left: 10px;
+  left: 0px;
+  white-space: normal;
+  padding-top: 7px;
+  font-family: 'Ubuntu', Verdana;
+}
+
+.compoundoption {
+  /*border-left: 1px solid #c6c7d2;*/
+  background: #fafaff;
+  padding-left:0px;
+  margin-top: 5px;
+  text-align: left;
+  left: 0;
+  white-space: normal;
+  /*background-color: #fbfdff;*/
+}
+
+.childselect{
+   /*color: #f5d9bc;*/
+  color: #9d1923;
+}
+
+.nothing{
+  color: rgb(255, 252, 243)
+}
+
+.defaultbtn:focus,
+.defaultbtn:active,
+.defaultbtn.active,
+.childplacement:focus,
+.childplacement:active,
+.childplacement.active,
+.seqsetbtn:focus,
+.seqsetbtn:active,
+.placementbtn:focus,
+.placementbtn.active,
+.placementbtn:active
+.placementbtn:focus:active{
+  border: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.placementborder{
+ /* box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border:1px #c6c7d2 ;*/
+  border-bottom:1px solid #c6c7d2;
+  /*border-left: 1px solid #c6c7d2;*/
+  background-color: #fbfdff;
+  border-left: 1px solid #c6c7d2;
+}
+
+.nextrowline{
+  border-top: 1px solid #c6c7d2;
+}
+
+.nextselectline{
+  border-bottom: 1px solid #c6c7d2;
+}
+
+
+.camerabtn:focus,
+.camerabtn:active,
+.camerabtn.active{
+   outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.childplacement:hover,
+.placementbtn:hover {
+  background-color: #ebeded;
+}
+
+.childborder{
+  /*border-width: 1px;*/
+  /*border-bottom-width: 0px;
+  border-style: solid;
+  border-color: #996633;*/
+  border:1px solid #c6c7d2
+  background-color: #fbfdff;
+
+}
+
+.childfree{
+  border-left: 1px solid #c6c7d2;
+  border-top: 1px solid #c6c7d2;
+  left:12px;
+  background-color: #fbfdff;
+  font-family: Ubuntu;
+}
+
+.seqsetbtn {
+  border-top: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  background: #f7b6b9;
+  background-color: #f7e3d5;
+  border-radius: 0px;
+  text-align: left ;
+  padding-left: 0px;
+}
+
+.seqsetline{
+   border-bottom:1px solid #c6c7d2;
+}
+
+.seqsetitalic{
+  font-family: Ubuntu;
+  font-style: italic;
+}
+
+.seqsetbtn:hover {
+  background-color:#F7cccb;
+}
+
+.camerabtn {
+  /*margin-left: 5px;*/
+  /*margin-bottom: 8px;
+
+  border-width: 1px;
+  border-color: #c6c7e1;*/
+  border-width: 1px;
+  border-radius: 5px;
+  height: 22px;
+  width: 70px;
+  /*background-color: #f7f2f3;*/
+  font-size: smaller; /*smaller*/;
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Ubuntu', Verdana;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow:none;
+  position:relative;
+  left:10px;
+}
+
+.closecam{
+  background-color: #f7f2f3;
+  color:#a71d5d;
+}
+
+.widecam{
+  background-color: #e9ecf7;
+  color:#183691;
+}
+
+.camerabtn:disabled {
+  background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.radiobtn {
+  background-color: #a9d9f7;
+  /*border-radius:15px;
+  height: 30px;
+  width: 30px;*/
+  border: 2px;
+  border-color: #000066;
+
+  /*width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+    overflow:hidden;
+
+    background: #4679BD;
+    box-shadow: 0 0 3px gray;*/
+}
+.radiobtn:active,
+.radiobtn.active,
+.radiobtn:hover,
+.radiobtn.selected{
+  border: 2px;
+  border-color: #A00000;
+  background-color: #b3aac1;
+}
+
+/*.radiobtn:hover{
+    background-color: #33c0c1;
+}*/
+
+.default-text {
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 7px;
+  font-family: 'Ubuntu', Verdana;
+  color: #333;
+  padding-left: 0px;
+}
+
+.linktext{
+  text-align: left;
+  font-family: 'Ubuntu', Verdana;
+  color: #333;
+}
+
+
+.janetext{
+  font-family: Ubuntu;
+  padding-top: 5px;
+  white-space: normal;
+  text-align: left
+}
+
+.seqtyperow{
+  position: relative;
+  left:55px;
+  border-left: 1px solid #c6c7d2;
+  border-top:1px solid #c6c7d2;
+}
+
+
+.verticalLine {
+  border-left: solid #0000ff;
+}
+
+.optionbtn {
+  /*border-width: 1px;*/
+  /*border-color: #c6c7d2;*/
+  border-top:1px solid #c6c7d2;
+  border-left: 1px solid #c6c7d2;
+  border-right: 1px solid #c6c7d2;
+  /*border-top: 1px;
+  border-right-width: 1px;
+  border-right-color: #996633;
+  border-left-width: 1px;
+  border-left-color: #996633;
+  border-bottom-width: 1px;
+  border-bottom-color:#996633  ;*/
+  background: #fbfdff; /*f7f4e8;*/
+  border-radius: 0px;
+  padding-left: 14px;
+  padding-bottom: 5px;
+  text-align: left;
+  white-space: normal;
+  border-right-width: 0px;
+  left: 36px;
+  /*color: #000000;*/
+  color: #333;
+  font-family: 'Ubuntu', Verdana;
+}
+
+.optionbtn-disabled {
+  /*background: #ffffff;*/
+  color: #4e575b;/*888; 666666;#ffffff;*/
+}
+
+.optionbtn:hover {
+  background-color: #ebeded; //*#edd99f;*/
+}
+
+.caret.caret-reversed {
+  border-top-width: 0;
+  border-bottom: 4px solid #000000;
+}
+
+.caret-centre {
+  /*horiz--align: middle;*/
+  /*display: inline-block;*/
+  padding-top: 8px;
+  color: #4183c4; /*#795da3; #c6c7e1;*/
+  filter: alpha(opacity=40)
+  position:relative;
+  left:30px;
+  /*position:absolute;*/
+  /*top:45%;*/
+  /*left:45%;*/
+ /* position:relative;
+  top: calc(50% - 10px);*/
+}
+
+.pairedlink {
+  color: #183691;
+}
+
+.radio-centre {
+  vertical-align: middle;
+  horiz-align: center;
+  display: inline-block;
+}
+
+.scriptbox {
+  border-top:  1px solid #c6c7d2;
+  border-bottom:  1px solid #c6c7d2;
+  overflow-y: scroll;
+  /*overflow-y: auto;*/
+  height: 90vh; /*500px;*/
+  overflow-x: hidden; /*scroll
+  padding-right: 0;
+  /*margin-left: 0;*/
+  width: 45vw; /*580px;
+  -moz-width: 40vw;*/
+  /*position: absolute;
+  max-width: 45%;*/
+  top: 30px;
+  left:60px;
+  /*float:left;*/
+  /*display: inline*/
+}
+
+label {
+    font-weight: normal !important;
+}
+.controlbox{
+  float:right;
+  position: relative;
+  font-family: 'Ubuntu', Verdana;
+  top: 30px;
+  left: 40px;
+  height: 90vh;
+}
+
+.script-title{
+  font-size: 28px;
+  white-space: normal;
+  color: #333;
+}
+
+.playbtn{
+  font-family: 'Ubuntu', Verdana;
+  color: #333;
+  font-size: 24px;
+  white-space: normal;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  background-color: #fafaff;
+}
+
+.speakertxt{
+  text-align: left;
+  white-space: normal;
+
+  padding-left: 0;
+  padding-top: 5px;
+  color: #4183c4;
+  font-family: 'Ubuntu', Verdana;
+}
+
+.leaveoption{
+  background-color:#f5eac9;
+}
+
+.enteroption {
+  /*background-color:#edd99f;*/
+  background-color: #ed1750;
+}

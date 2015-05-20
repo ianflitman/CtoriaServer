@@ -1,0 +1,31 @@
+<div class='container'>
+    <div class='row col-md-6'>
+        <div speaker-cut-id={{cut.id}} class="col-md-1 speakertxt" style="padding-left: 0px;padding-top: 5px">{{cut.id | speaker}}</div>
+        <div id='row_" + $scope.cut.id + "_sel' class='col-md-9 compoundoption'><p></p></div>
+        <div class='col-md-2'>
+            <button id=camera_{{cut.id}} db_id='0' ng-click='optCameraToggle()' class='pull-right camerabtn'>camera
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div id=row_{{cut.id}} class="row col-md-6" style="background-color: #fbfdff;border-left: 1px solid #c6c7d2;padding-left: 20px">
+        <div class="col-md-9" style="padding-left: 0">
+            <div speaker-cut-id={{cut.id}} class="col-md-1 speakertxt" style="padding-left: 0px;padding-top: 5px">
+                {{cut.id | speaker}}
+            </div>
+
+            <div class="col-md-11" style="padding-left: 18px" >
+                <button data-cut-id={{cut.id}} data-selected-position="0"
+                        class="btn  col-md-12 placementbtn pull-left "
+                        ng-click="fold(cut.id)">parent alt {{cut.id}}
+                </button>
+            </div>
+        </div>
+        <div id=icon_{{cut.id}} class="col-md-3"><i class="pull-left fa fa-chevron-right  caret-centre" style="position: relative;left: 20px"></i>
+            <span><button id=cameras_{{cut.id}} db_id="0" ng-click="cameraToggle()" class="pull-right camerabtn" data-camera="">{{cut.children[0].options[0].sources[0].file | camera}}</button></span>
+        </div>
+    </div>
+</div>

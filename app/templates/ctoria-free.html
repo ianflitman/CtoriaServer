@@ -1,0 +1,34 @@
+<div class="container">
+    <div id=row_{{cut.index}} class="row col-sm-6" data-file="0" data-ctoria-type="ALTERNATIVE_FREE" style="background-color: #fbfdff;border-left: 1px solid #c6c7d2;">
+        <div speaker-cut-id={{cut.index}} class="col-sm-1 speakertxt" style="padding-left: 0px;padding-top: 5px">{{cut.index |
+            speaker}}
+        </div>
+        <div class="col-sm-8" style="padding-left: 0px">
+            <button data-cut-id={{cut.index}} data-selected-position="0"
+                    class="btn col-sm-12 placementbtn"
+                    ng-click="fold(cut.index)">free alt {{cut.index}}
+            </button>
+        </div>
+        <div id=icon_{{cut.index}} class="col-sm-3 pull-right">
+            <i class="fa fa-chevron-right caret-centre" style="position: relative;left: 20px;"></i>
+            <span><button id=camera_{{cut.index}} db_id="0" ng-click="cameraToggle()" class="pull-right camerabtn"
+                          data-camera="">{{cut.options[0].sources[0].file | camera}}
+            </button></span>
+        </div>
+    </div>
+</div>
+
+    <div id=collapse_{{cut.index}} collapse="true" class="container">
+        <div class="row col-sm-7" style="padding-left: 10px">
+        <button id={{cut.index}}_opt_{{option.position}} data-position='{{option.position}}'
+                ng-click="optionClick(cut.index + '_opt_'+ option.position)"
+                data-option-id='{{option.index}}' class="btn col-sm-10 optionbtn"
+                ng-repeat="option in cut.options">
+            {{option.line}}
+        </button>
+         </div>
+    </div>
+
+
+
+

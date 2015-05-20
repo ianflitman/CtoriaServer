@@ -1,0 +1,22 @@
+<div class="container">
+    <div id=row_{{index}}_child_{{cut.position}} class="row col-md-6 childborder childfree">
+        <div class="col-md-9" style="padding-left: 0px;">
+            <button data-cut-id={{index}}_child_{{cut.position}} data-selected-option="0"
+                    class="btn col-md-11 childplacement" style="padding-left: 0px;position:relative;left:0px;"
+                    ng-click="fold(index + '_child_' + cut.position)">free alt {{$parent.cut.index}}
+            </button>
+        </div>
+        <div id=icon_{{index}}_child_{{cut.position}} class="col-md-3 caret-centre">
+            <i class="pull-left fa fa-chevron-right"></i>
+        </div>
+    </div>
+</div>
+    <div id=collapse_{{index}}_child_{{cut.position}} collapse="true" class="container">
+        <div class="row col-md-7">
+        <button id={{index}}_child_{{cut.position}}_opt_{{option.position}} data-position='{{option.position}}'
+                ng-click="optionClick(index + '_child_' + cut.position + '_opt_'+ option.position)"
+                class="btn col-md-10 optionbtn" ng-repeat="option in cut.options" style="left:10px;padding-left: 12px;">
+            {{option.line}}
+        </button>
+        </div>
+    </div>

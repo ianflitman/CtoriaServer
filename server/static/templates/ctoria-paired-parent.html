@@ -1,0 +1,31 @@
+<div class="container">
+    <div id=row_{{cut.index}} class="row col-md-6" data-file="0" data-ctoria-type="ALTERNATIVE_PAIRED_PARENT" style="background-color: #fbfdff;">
+        <div class=" row col-md-8" style="border-left: 1px solid #c6c7d2;">
+            <div speaker-cut-id={{cut.index}} class="col-md-1 speakertxt" style="padding-left: 0px;padding-top: 5px">
+                {{cut.index | speaker}}
+            </div>
+            <div class="col-md-11" style="padding-left: 18px" >
+                <button data-cut-id={{cut.index}} data-selected-child="0" data-selected-option="0"
+                        class="btn  col-md-12 placementbtn pull-left"
+                        ng-click="fold(cut.index)">paired parent alt {{cut.index}}
+                </button>
+            </div>
+        </div>
+
+        <div id=icon_{{cut.index}} class="col-md-4" style="margin-left: 30px">
+            <span class="linktext pull-left"><i class="glyphicon glyphicon-link pairedlink" style="margin-top: 8px"></i>&nbsp{{cut.arguments.pos | ordinal}}/{{cut.arguments.total}}
+            </span>
+            <i class="pull-left fa fa-chevron-right caret-centre" style="position: relative; left:10px"></i>
+            <span style="top:0px"><button id=camera_{{cut.index}} db_id="0" ng-click="cameraToggle()" class="pull-right camerabtn" data-camera="">{{cut.children[0].options[0].sources[0].file | camera}}</button></span>
+        </div>
+    </div>
+</div>
+
+
+<div id=collapse_{{cut.index}} collapse="true">
+    <div ng-repeat="child in cut.children" style="margin-left:32px">
+            <span ng-switch="child.type">
+                    <ctoria-paired-child-free ng-switch-when="ALTERNATIVE_FREE" cut="child" index="cut.index" child-index="child.position" data-db-id="0" selected="0"></ctoria-paired-child-free>
+            </span>
+    </div>
+</div>

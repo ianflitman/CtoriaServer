@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="container scriptbox col-md-6" style="padding-left: 0; background-color: #333">
+            <div ng-repeat="cut in content()">
+                    <span ng-switch="cut.type">
+                        <ctoria-free ng-switch-when="ALTERNATIVE_FREE" cut="cut" data-db-id="0"
+                                     selected="0"></ctoria-free>
+                        <ctoria-default ng-switch-when="DEFAULT" cut="cut" db_id="0"></ctoria-default>
+                        <ctoria-seq-set ng-switch-when="SEQUENCE_SET" cut="cut" set-selected="" seq-index=""
+                                        data-db-id="0"></ctoria-seq-set>
+                        <ctoria-paired-free ng-switch-when="ALTERNATIVE_PAIRED" cut="cut"
+                                            data-db-id="0" data-selected-position="0"></ctoria-paired-free>
+                        <ctoria-parent ng-switch-when="ALTERNATIVE_PARENT" cut="cut"
+                                       data-selected-position="0" data-selected-child="-1"
+                                       data-db-id="0"></ctoria-parent>
+                        <ctoria-paired-parent ng-switch-when="ALTERNATIVE_PAIRED_PARENT" cut="cut"
+                                              data-selected-position="0" data-selected-child="-1"
+                                              data-db-id="0"></ctoria-paired-parent>
+                    </span>
+            </div>
+        </div>
+
+        <ctoria-control title={{title}} generated={{generated}}></ctoria-control>
+
+    </div>
+</div>
+
